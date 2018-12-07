@@ -1,0 +1,116 @@
+<!doctype html>
+<html ng-app="myApp"> 
+    
+<head>
+    <title>User Login and Sessions</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Bilbo Swash Caps' rel='stylesheet'>
+</head>
+        
+<body>
+    <audio controls autoplay>
+        <source src = "https://ia801307.us.archive.org/35/items/Twelve-Days-of-Christmas/jazzy-christmas-twelve-days-of-christmas.mp3"
+        type = "audio/mp3">
+    </audio>
+    <div class="snowflakes" aria-hidden="true">
+        <div class="snowflake">
+            ❄
+        </div>
+        <div class="snowflake">
+            ❅
+        </div>
+        <div class="snowflake">
+            ❆
+        </div>
+        <div class="snowflake">
+            ❄
+        </div>
+        <div class="snowflake">
+            ❅
+        </div>
+        <div class="snowflake">
+            ❆
+        </div>
+        <div class="snowflake">
+            ❄
+        </div>
+        <div class="snowflake">
+            ❅
+        </div>
+        <div class="snowflake">
+            ❆
+        </div>
+        <div class="snowflake">
+            ❄
+        </div>
+    </div>
+    <div class="form-container">
+        <div ng-controller="myController">
+        <h2 id="welcomeText">Welcome 
+            <%= username %>
+        </h2>
+        <a id="logoutLink" href="/logout">Logout</a>
+        <a id="editLink" href="/user">Edit Goals</a>
+    </div>
+    <hr>
+    <span id="indexMsg">
+        <%= msg %>
+    </span>
+    <hr>
+    <h2>Your Twelve Days of Christmas Goals:</h2>
+    <div id="goals">
+    <span id="oneText">
+    First Day Goal: 
+        <%= one %>
+    </span><br>
+    <span id="twoText">
+    Second Day Goal: 
+        <%= two %>
+    </span><br>
+    <span id="threeText">
+    Third Day Goal: 
+        <%= three %>
+    </span><br>
+    <span id="fourText">
+    Fourth Day Goal: 
+        <%= four %>
+    </span><br>
+    <span id="fiveText">
+    Fifth Day Goal: 
+        <%= five %>
+    </span><br>
+    <span id="sixText">
+    Sixth Day Goal: 
+        <%= six %>
+    </span><br>
+    <span id="sevenText">
+    Seventh Day Goal: 
+        <%= seven %>
+    </span><br>
+    <span id="eightText">
+    Eight Day Goal: 
+        <%= eight %>
+    </span><br>
+    <span id="nineText">
+    Nineth Day Goal: 
+        <%= nine %>
+    </span><br>
+    <span id="tenText">
+    Tenth Day Goal: 
+        <%= ten %>
+    </span><br>
+    <span id="elevenText">
+    Eleventh Day Goal: 
+        <%= eleven %>
+    </span><br>
+    <span id="twelveText">
+    Twelfth Day Goal: 
+        <%= twelve %>
+    </span><br>
+    </div>
+    <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
+    <script src="/javascripts/my_app.js"></script>
+    </div>
+</body>
+      
+</html>

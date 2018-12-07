@@ -1,0 +1,91 @@
+<!doctype html>
+<html ng-app="myApp">
+    
+<head>
+    <title>User Login and Sessions</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Bilbo Swash Caps' rel='stylesheet'>
+</head>
+        
+<body>  
+    <audio controls autoplay>
+        <source src = "https://ia801307.us.archive.org/35/items/Twelve-Days-of-Christmas/jazzy-christmas-twelve-days-of-christmas.mp3"
+        type = "audio/mp3">
+    </audio>
+    <div class="snowflakes" aria-hidden="true">
+        <div class="snowflake">
+            ❄
+        </div>
+        <div class="snowflake">
+            ❅
+        </div>
+        <div class="snowflake">
+            ❆
+        </div>
+        <div class="snowflake">
+            ❄
+        </div>
+        <div class="snowflake">
+            ❅
+        </div>
+        <div class="snowflake">
+            ❆
+        </div>
+        <div class="snowflake">
+            ❄
+        </div>
+        <div class="snowflake">
+            ❅
+        </div>
+        <div class="snowflake">
+            ❆
+        </div>
+        <div class="snowflake">
+            ❄
+        </div>
+    </div>
+    <div class="form-container" ng-controller="myController">
+        <p id="sectionTitle" class="form-header">Set Your Goals:</p>
+        <form method="POST" action="/user/update">
+            <label>Username:</label>
+            <input type="text" id="username" name="username" ng-model="user.username" disabled><br>
+            <label>First Day Goal:</label>
+            <input type="text" id="one" name="one" ng-model="one" placeholder="Make Cookies for Neighbors"><br>
+            <label>Second Day Goal:</label>
+            <input type="text" id="two" name="two" ng-model="two" placeholder="Go Snowmobiling!"><br>
+            <label>Third Day Goal:</label>
+            <input type="text" id="three" name="three" ng-model="three" placeholder="Find Some Mistletoe . . ."><br>
+            <label>Fourth Day Goal:</label>
+            <input type="text" id="four" name="four" ng-model="four"><br>
+            <label>Fifth Day Goal:</label>
+            <input type="text" id="five" name="five" ng-model="five"><br>
+            <label>Sixth Day Goal:</label>
+            <input type="text" id="six" name="six" ng-model="six"><br>
+            <label>Seventh Day Goal:</label>
+            <input type="text" id="seven" name="seven" ng-model="seven"><br>
+            <label>Eighth Day Goal:</label>
+            <input type="text" id="eight" name="eight" ng-model="eight"><br>
+            <label>Nineth Day Goal:</label>
+            <input type="text" id="nine" name="nine" ng-model="nine"><br>
+            <label>Tenth Day Goal:</label>
+            <input type="text" id="ten" name="ten" ng-model="ten"><br>
+            <label>Eleventh Day Goal:</label>
+            <input type="text" id="eleven" name="eleven" ng-model="eleven"><br>
+            <label>Twelfth Day Goal:</label>
+            <input type="text" id="twelve" name="twelve" ng-model="twelve"><br>
+            <input class="submit" type="submit" id="save" value="Save">
+        </form>
+        <form method="POST" action="/user/delete">
+            <input class="submit" type="submit" id="delete" value="Delete User">
+        </form>
+        <hr>
+        <span id="userMsg">
+        <%= msg %>
+        </span>
+        <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
+        <script src="/javascripts/my_app.js"></script>
+        <a id="homeLink" href="/">Home</a>
+    </div>
+</body>
+
+</html>
